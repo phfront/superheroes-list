@@ -1,0 +1,25 @@
+.superheroes-header {
+  display: flex;
+  width: 700px;
+  height: 110px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+
+  Button {
+    width: 200px;
+
+    @media screen and (max-width: 720px) {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 95%;
+  }
+}

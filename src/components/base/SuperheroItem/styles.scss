@@ -1,0 +1,40 @@
+.superhero-item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: all 0.1s;
+  user-select: none;
+  border-radius: 30px;
+
+  &:hover {
+    transform: rotate(-3deg);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba($color: #000000, $alpha: 0.3);
+    font-size: 2rem;
+    text-align: center;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.5rem;
+    }
+  }
+}

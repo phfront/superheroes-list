@@ -26,12 +26,19 @@ type Props = StateProps & DispatchProps;
 function SuperheroHeadedr({ loadRequest }: Props) {
   const [search, setSearch] = useState<string>("");
 
+  const handleKeyUp = (key: string) => {
+    if (key === 'Enter') {
+      loadRequest(search);
+    }
+  }
+
   return (
     <div className="superheroes-header">
         <Input
             placeholder="Pesquise um herói ou heroína"
             value={search}
             setValue={setSearch}
+            handleKeyUp={handleKeyUp}
         />
         <Button
             click={() => loadRequest(search)}

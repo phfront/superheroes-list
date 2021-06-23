@@ -55,10 +55,14 @@ function SuperheroList({
           <div className="no-hero">
             Nenhum herói ou heroína encontrado com a busca...
           </div>
-          <div className="title">Superheroes</div>
+          <div className="title-container">
+            <div className="title">Superheroes</div>
+          </div>
         </>
       ) : (
-        <div className="title">Superheroes</div>
+        <div className="title-container">
+          <div className="title">Superheroes</div>
+        </div>
       )}
     </div>
   );
